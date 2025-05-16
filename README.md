@@ -2,20 +2,18 @@
 
 Este é um projeto de blog construído com a arquitetura **JAMstack**, utilizando:
 
-````markdown
+
 - **Strapi CMS** como gerenciador de conteúdo (interface + API),
 - **PostgreSQL** local via Docker como banco de dados,
 - **Cloudinary** para upload e gerenciamento de imagens,
-- **Next.js** (via `create-next-app`) para o front-end.
 
 Todo o projeto é voltado para **estudos e prática**, rodando 100% localmente (sem servidores hospedados).
-````
+
 ## 🔧 Tecnologias Utilizadas
 
 - [Strapi](https://strapi.io/) (CMS headless)
 - [PostgreSQL](https://www.postgresql.org/) via [Docker](https://www.docker.com/)
 - [Cloudinary](https://cloudinary.com/) (armazenamento de imagens)
-- [Next.js](https://nextjs.org/) (`create-next-app`)
 - [Docker Compose](https://docs.docker.com/compose/)
 
 ---
@@ -98,7 +96,7 @@ Para acessar os dados da API (ex: `/api/posts`):
 GET http://localhost:1337/api/posts
 ```
 
-Para incluir autor ou imagens, use `populate`:
+Para pegar autor ou imagens, use `populate`:
 
 ```http
 GET http://localhost:1337/api/posts?populate=author,cover
@@ -114,13 +112,12 @@ GET http://localhost:1337/api/posts?populate=*
 
 ## 💻 Front-end com Next.js
 
-Crie um front-end separado com:
+O front-end deste projeto está disponível neste repositório: [blog-next](https://github.com/Truefenix/blog-next)
 
-```bash
-npx create-next-app blog-frontend
-```
+Ele foi criado utilizando Next.js com suporte a geração estática de páginas (SSG) e estilização com Styled Components.
 
-Acesse a API Strapi localmente via `http://localhost:1337/api/posts` ou configure o `.env.local` no Next.js para definir a URL base da API.
+A aplicação se conecta à API Strapi através de `http://localhost:1337/api/posts` ou da variável de ambiente `NEXT_PUBLIC_API_URL` configurada no arquivo `.env.local`.
+
 
 ---
 
@@ -144,4 +141,4 @@ Este projeto é um estudo prático da arquitetura JAMstack, CMS headless com Str
 </table>
 
 <h4 align="center">
-By<a href="https://github.com/Truefenix" target="_blank"> Truefenix </a>🪓
+By<a href="https://github.com/Truefenix" target="_blank"> Truefenix </a>✍️
